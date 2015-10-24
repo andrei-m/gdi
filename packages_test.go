@@ -1,7 +1,9 @@
 package gdi
 
-import "os"
-import "testing"
+import (
+	"os"
+	"testing"
+)
 
 func Test_GetDependencies(t *testing.T) {
 	cwd, err := os.Getwd()
