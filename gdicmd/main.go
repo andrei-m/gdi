@@ -18,6 +18,8 @@ func main() {
 	}
 
 	for path := range pkgs {
-		log.Println(path)
+		if matched, url := gdi.MatchAndGetGithubURL(path); matched {
+			log.Println(url.String())
+		}
 	}
 }
