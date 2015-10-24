@@ -23,7 +23,7 @@ func Test_GetDependencies(t *testing.T) {
 		t.Fail()
 	}
 
-	pkgs, err = GetDependencies(cwd, "github.com/andrei-m/gdi/cmd")
+	pkgs, err = GetDependencies(cwd, "github.com/andrei-m/gdi/gdicmd")
 	if err != nil {
 		t.Error(err)
 	}
@@ -34,7 +34,7 @@ func Test_GetDependencies(t *testing.T) {
 	if !ok {
 		t.Fail()
 	}
-	_, ok = pkgs["github.com/andrei-m/gdi/cmd"]
+	_, ok = pkgs["github.com/andrei-m/gdi/gdicmd"]
 	if !ok {
 		t.Fail()
 	}
